@@ -1,0 +1,35 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "riskrs"
+version = "0.1.0"
+description = "Risk calculation library with Polars integration"
+authors = [
+    {name = "jonasmo@gmail.com", email = "me@jonasmeyerohle.dev"},
+]
+requires-python = ">=3.9"
+dependencies = [
+    "polars>=1.0.0",
+]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[tool.maturin]
+python-source = "python"
+module-name = "riskrs._internal"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "maturin>=1.9.0",
+    "numpy>=2.0.2",
+    "pytest>=8.4.1",
+    "scikit-learn>=1.6.1",
+]

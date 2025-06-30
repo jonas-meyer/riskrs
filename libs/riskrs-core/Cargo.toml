@@ -1,0 +1,12 @@
+[package]
+name = "riskrs-core"
+version = "0.1.0"
+edition = "2021"
+description = "Core risk calculation algorithms"
+license = "MIT"
+repository = "https://github.com/jonas-meyer/riskrs"
+keywords = ["risk", "finance", "statistics"]
+categories = ["mathematics", "science"]
+
+[dependencies]
+polars = { workspace = true, features = ["dtype-struct"] }
